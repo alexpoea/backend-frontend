@@ -1019,7 +1019,7 @@ function App() {
         <div className="login-box">
 
           <h1>
-            Sistema de Ventas
+            marketplace
           </h1>
 
           <h2>
