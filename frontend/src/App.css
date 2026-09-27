@@ -1,0 +1,1051 @@
+/* =========================================================
+   SISTEMA DE VENTAS
+   DASHBOARD PREMIUM
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f7fb;
+  color: #172033;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.login-container {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background:
+    radial-gradient(circle at 10% 20%, rgba(37, 99, 235, .35), transparent 30%),
+    radial-gradient(circle at 90% 80%, rgba(79, 70, 229, .30), transparent 30%),
+    linear-gradient(135deg, #07111f, #102a56, #172554);
+}
+
+.login-box {
+  width: 430px;
+  max-width: 100%;
+
+  padding: 42px;
+
+  background: rgba(255,255,255,.97);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.35);
+
+  animation: entrada .6s ease;
+}
+
+.login-box h1 {
+  margin: 0;
+
+  text-align: center;
+
+  font-size: 30px;
+  font-weight: 800;
+
+  color: #0f172a;
+}
+
+.login-box h2 {
+  margin: 8px 0 30px;
+
+  text-align: center;
+
+  color: #64748b;
+
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.input {
+  width: 100%;
+  height: 48px;
+
+  padding: 0 15px;
+
+  border: 1px solid #dce3ed;
+  border-radius: 11px;
+
+  outline: none;
+
+  background: #f8fafc;
+
+  transition: .2s;
+}
+
+.input:hover {
+  border-color: #b8c4d6;
+}
+
+.input:focus {
+  border-color: #2563eb;
+
+  background: white;
+
+  box-shadow: 0 0 0 4px rgba(37,99,235,.10);
+}
+
+textarea.input {
+  min-height: 110px;
+  padding: 13px 15px;
+  resize: vertical;
+}
+
+
+/* =========================================================
+   CAPTCHA
+========================================================= */
+
+.captcha {
+  padding: 15px;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 13px;
+
+  background: #f8fafc;
+}
+
+.captcha-titulo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 12px;
+}
+
+.captcha-icono {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #dcfce7;
+  color: #15803d;
+
+  font-weight: 800;
+}
+
+.captcha-subtitulo {
+  display: block;
+
+  color: #94a3b8;
+
+  font-size: 11px;
+}
+
+.captcha-contenido {
+  display: flex;
+  gap: 8px;
+}
+
+.codigo-captcha {
+  flex: 1;
+
+  height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border: 1px solid #dbe2ea;
+  border-radius: 10px;
+
+  background: white;
+}
+
+.letra-captcha {
+  margin: 0 3px;
+
+  color: #172554;
+
+  font-family: Georgia, serif;
+
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.captcha-letra-izquierda {
+  transform: rotate(-7deg);
+}
+
+.captcha-letra-derecha {
+  transform: rotate(7deg);
+}
+
+.linea-captcha-1,
+.linea-captcha-2 {
+  position: absolute;
+
+  width: 130%;
+  height: 1px;
+
+  background: #94a3b8;
+
+  opacity: .4;
+}
+
+.linea-captcha-1 {
+  transform: rotate(9deg);
+}
+
+.linea-captcha-2 {
+  transform: rotate(-13deg);
+}
+
+.puntos-captcha {
+  position: absolute;
+
+  color: #94a3b8;
+
+  letter-spacing: 8px;
+}
+
+.boton-captcha {
+  width: 44px;
+  height: 44px;
+
+  border: 1px solid #dbe2ea;
+
+  border-radius: 10px;
+
+  background: white;
+
+  transition: .2s;
+}
+
+.boton-captcha:hover {
+  background: #eff6ff;
+  border-color: #93c5fd;
+}
+
+.input-captcha {
+  width: 100%;
+  height: 44px;
+
+  margin-top: 10px;
+
+  padding: 0 13px;
+
+  border: 1px solid #dbe2ea;
+
+  border-radius: 9px;
+
+  outline: none;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+========================================================= */
+
+.boton-login {
+  width: 100%;
+  height: 50px;
+
+  margin-top: 5px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background: linear-gradient(135deg,#2563eb,#1d4ed8);
+
+  color: white;
+
+  font-weight: 700;
+
+  box-shadow: 0 10px 25px rgba(37,99,235,.25);
+
+  transition: .2s;
+}
+
+.boton-login:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 15px 30px rgba(37,99,235,.32);
+}
+
+.error {
+  padding: 11px;
+
+  border-radius: 9px;
+
+  background: #fff1f2;
+
+  border: 1px solid #fecdd3;
+
+  color: #be123c;
+
+  text-align: center;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.contenedor {
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+.usuario-info {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 28px 42px;
+
+  background:
+    linear-gradient(120deg,#07111f,#102b59,#1d4ed8);
+
+  color: white;
+
+  box-shadow: 0 8px 25px rgba(15,23,42,.18);
+}
+
+.usuario-info::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: -80px;
+  top: -180px;
+
+  border: 1px solid rgba(255,255,255,.12);
+
+  border-radius: 50%;
+}
+
+.usuario-info h2 {
+  margin: 0 0 12px;
+
+  font-size: 26px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.usuario-info p {
+  display: inline-block;
+
+  margin: 0 25px 0 0;
+
+  color: #dbeafe;
+
+  font-size: 13px;
+
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================================
+   ROLES
+========================================================= */
+
+.rol {
+  display: inline-block;
+
+  padding: 6px 13px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.rol-admin {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.rol-proveedor {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+.rol-cliente {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.menu {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 12px 35px;
+
+  background: white;
+
+  border-bottom: 1px solid #e2e8f0;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 100;
+
+  box-shadow: 0 3px 15px rgba(15,23,42,.05);
+}
+
+.boton {
+  min-height: 40px;
+
+  padding: 0 16px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #475569;
+
+  font-weight: 650;
+
+  transition: .2s;
+}
+
+.boton:hover {
+  background: #eff6ff;
+  color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.boton-salir {
+  margin-left: auto;
+
+  padding: 10px 17px;
+
+  border: 1px solid #fecaca;
+
+  border-radius: 9px;
+
+  background: white;
+
+  color: #b91c1c;
+
+  font-weight: 650;
+}
+
+.boton-salir:hover {
+  background: #fef2f2;
+}
+
+
+/* =========================================================
+   SECCIONES
+========================================================= */
+
+.seccion {
+  max-width: 1400px;
+
+  margin: auto;
+
+  padding: 35px;
+}
+
+.seccion h2 {
+  margin: 0 0 24px;
+
+  color: #0f172a;
+
+  font-size: 25px;
+}
+
+
+/* =========================================================
+   FORMULARIOS
+========================================================= */
+
+.seccion > form {
+  display: grid;
+
+  grid-template-columns: repeat(2,1fr);
+
+  gap: 15px;
+
+  padding: 28px;
+
+  margin-bottom: 35px;
+
+  background: white;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 17px;
+
+  box-shadow: 0 7px 25px rgba(15,23,42,.05);
+}
+
+.seccion > form .textarea,
+.opciones-imagen,
+.vista-previa {
+  grid-column: 1 / -1;
+}
+
+.seccion > form .boton,
+.seccion > form .boton-cancelar {
+  width: fit-content;
+}
+
+
+/* =========================================================
+   TABLAS
+========================================================= */
+
+.tabla {
+  width: 100%;
+
+  overflow: hidden;
+
+  border-collapse: separate;
+  border-spacing: 0;
+
+  background: white;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 15px;
+
+  box-shadow: 0 7px 25px rgba(15,23,42,.05);
+}
+
+.tabla th {
+  padding: 15px;
+
+  background: #f8fafc;
+
+  border-bottom: 1px solid #e2e8f0;
+
+  color: #64748b;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .7px;
+
+  text-align: left;
+}
+
+.tabla td {
+  padding: 15px;
+
+  border-bottom: 1px solid #f1f5f9;
+
+  color: #475569;
+
+  font-size: 13px;
+}
+
+.tabla tr:last-child td {
+  border-bottom: none;
+}
+
+.tabla tbody tr {
+  transition: .15s;
+}
+
+.tabla tbody tr:hover {
+  background: #f8fbff;
+}
+
+
+/* =========================================================
+   BOTONES
+========================================================= */
+
+.boton-editar,
+.boton-eliminar,
+.boton-aceptar,
+.boton-rechazar {
+  min-height: 34px;
+
+  margin-right: 5px;
+
+  padding: 0 11px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+
+  font-weight: 650;
+
+  transition: .2s;
+}
+
+.boton-editar {
+  border: 1px solid #bfdbfe;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.boton-eliminar,
+.boton-rechazar {
+  border: 1px solid #fecaca;
+  background: #fff1f2;
+  color: #b91c1c;
+}
+
+.boton-aceptar {
+  border: 1px solid #bbf7d0;
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+.boton-editar:hover,
+.boton-eliminar:hover,
+.boton-aceptar:hover,
+.boton-rechazar:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   PRODUCTOS
+========================================================= */
+
+.productos {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fill,minmax(270px,1fr));
+
+  gap: 25px;
+}
+
+.producto {
+  overflow: hidden;
+
+  background: white;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 18px;
+
+  box-shadow: 0 7px 25px rgba(15,23,42,.06);
+
+  transition: .25s;
+}
+
+.producto:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 20px 40px rgba(15,23,42,.12);
+}
+
+.imagen-producto {
+  width: 100%;
+  height: 220px;
+
+  display: block;
+
+  object-fit: cover;
+
+  cursor: pointer;
+
+  transition: .35s;
+}
+
+.producto:hover .imagen-producto {
+  transform: scale(1.04);
+}
+
+.sin-imagen {
+  height: 220px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f1f5f9;
+
+  color: #94a3b8;
+}
+
+.producto h3 {
+  margin: 18px 18px 8px;
+
+  color: #111827;
+
+  font-size: 18px;
+}
+
+.producto p {
+  margin: 7px 18px;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   ESTADOS
+========================================================= */
+
+.estado-publicado,
+.estado-aceptado,
+.estado-pendiente,
+.estado-rechazado {
+  display: inline-block;
+
+  margin: 11px 18px !important;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  font-size: 11px !important;
+
+  font-weight: 800;
+}
+
+.estado-publicado,
+.estado-aceptado {
+  background: #ecfdf5;
+  color: #15803d !important;
+}
+
+.estado-pendiente {
+  background: #fffbeb;
+  color: #b45309 !important;
+}
+
+.estado-rechazado {
+  background: #fff1f2;
+  color: #be123c !important;
+}
+
+
+/* =========================================================
+   PROVEEDOR
+========================================================= */
+
+.proveedor-info {
+  margin: 10px 18px;
+
+  padding: 10px;
+
+  border-radius: 9px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   AVISOS
+========================================================= */
+
+.aviso-rol {
+  margin-bottom: 20px;
+
+  padding: 14px 17px;
+
+  border-radius: 11px;
+
+  background: #eff6ff;
+
+  border: 1px solid #bfdbfe;
+
+  color: #1e40af;
+
+  font-size: 13px;
+}
+
+.aviso-proveedor {
+  background: #fff7ed;
+  border-color: #fed7aa;
+  color: #9a3412;
+}
+
+.aviso-admin {
+  background: #f5f3ff;
+  border-color: #ddd6fe;
+  color: #6d28d9;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal-fondo {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  background: rgba(15,23,42,.72);
+
+  backdrop-filter: blur(8px);
+}
+
+.modal {
+  width: 650px;
+  max-width: 100%;
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  padding: 32px;
+
+  background: white;
+
+  border-radius: 19px;
+
+  box-shadow: 0 35px 90px rgba(0,0,0,.3);
+
+  animation: entrada .3s ease;
+}
+
+.modal h2 {
+  margin-top: 0;
+
+  color: #0f172a;
+}
+
+.cerrar {
+  float: right;
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #f1f5f9;
+
+  color: #64748b;
+
+  font-size: 20px;
+}
+
+.cerrar:hover {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.imagen-grande {
+  width: 100%;
+  max-height: 380px;
+
+  object-fit: contain;
+
+  margin-bottom: 20px;
+
+  border-radius: 12px;
+
+  background: #f8fafc;
+}
+
+.sin-imagen-grande {
+  height: 280px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f1f5f9;
+
+  color: #94a3b8;
+
+  border-radius: 12px;
+}
+
+.modal-acciones {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+
+/* =========================================================
+   VACÍO
+========================================================= */
+
+.mensaje-vacio {
+  padding: 55px;
+
+  text-align: center;
+
+  background: white;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 17px;
+
+  color: #64748b;
+}
+
+
+/* =========================================================
+   ANIMACIONES
+========================================================= */
+
+@keyframes entrada {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .usuario-info {
+    padding: 25px 20px;
+  }
+
+  .menu {
+    padding: 10px 15px;
+    overflow-x: auto;
+  }
+
+  .boton-salir {
+    margin-left: 0;
+  }
+
+  .seccion {
+    padding: 25px 18px;
+  }
+
+  .seccion > form {
+    grid-template-columns: 1fr;
+  }
+
+  .seccion > form .textarea,
+  .opciones-imagen,
+  .vista-previa {
+    grid-column: auto;
+  }
+
+  .tabla {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 520px) {
+
+  .login-box {
+    padding: 30px 22px;
+  }
+
+  .login-box h1 {
+    font-size: 25px;
+  }
+
+  .productos {
+    grid-template-columns: 1fr;
+  }
+
+  .seccion {
+    padding: 20px 13px;
+  }
+
+  .usuario-info h2 {
+    font-size: 21px;
+  }
+
+  .modal {
+    padding: 22px;
+  }
+
+  .modal-acciones {
+    flex-direction: column;
+  }
+
+  .modal-acciones button {
+    width: 100%;
+  }
+}
