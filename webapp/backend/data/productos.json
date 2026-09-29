@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "nombre": "Laptop Gamer LOQ",
+    "descripcion": "Lenovo Laptop Gamer LOQ RTX 5050|15.6\" FHD Intel Core i5 |24GB RAM 512GB SSD| PC con IA | NVIDIA GeForce| Teclado Retroiluminado, Windows 11 Home\n",
+    "precio": 24999,
+    "stock": 1,
+    "imagen": "https://m.media-amazon.com/images/I/717EBQlo+9L._AC_SL1500_.jpg",
+    "creadoPor": 1,
+    "rolCreador": "admin",
+    "estado": "aceptado"
+  },
+  {
+    "id": 2,
+    "nombre": "Mouse Gamer ASUS Óptico TUF Gaming M4 Air",
+    "descripcion": "Mouse Gamer ASUS Óptico TUF Gaming M4 Air, Alámbrico, USB, 16.000DPI, Negro\n",
+    "precio": 919,
+    "stock": 1,
+    "imagen": "https://www.cyberpuerta.mx/img/product/XL/CP-ASUS-90MP02K0-BMAA00-fa3951.jpg",
+    "creadoPor": 2,
+    "rolCreador": "cliente",
+    "estado": "aceptado"
+  },
+  {
+    "id": 3,
+    "nombre": "ASUS Audífonos Gamer con Micrófono ROG Pelta",
+    "descripcion": "ASUS Audífonos Gamer con Micrófono ROG Pelta, Bluetooth, Inalámbrico, USB-C, para PS4/PS5/Nintendo Switch/PC/Mac, Negro\n",
+    "precio": 1989,
+    "stock": 1,
+    "imagen": "https://www.cyberpuerta.mx/img/product/XL/CP-ASUS-90YH0410-BHAA00-1.jpg",
+    "creadoPor": 1,
+    "rolCreador": "admin",
+    "estado": "aceptado"
+  },
+  {
+    "id": 4,
+    "nombre": "Teclado Gamer Redragon HORUS K618 RGB",
+    "descripcion": "Teclado Gamer Redragon HORUS K618 RGB, Teclado Mecánico, Switch Red Ultra, Inalámbrico, Negro (Español)\n",
+    "precio": 2019,
+    "stock": 1,
+    "imagen": "http://localhost:3000/uploads/productos/1790311788094-CP-REDRAGON-K618-RGB-SP-RD-f7b6b1.jpg",
+    "creadoPor": 1,
+    "rolCreador": "admin",
+    "estado": "aceptado"
+  },
+  {
+    "id": 5,
+    "nombre": "Teclado Gamer Redragon K630 Dragonborn",
+    "descripcion": "Teclado Gamer Redragon K630 Dragonborn LED RGB 60%, Teclado Mecánico, Redragon Brown, Alámbrico, USB, Blanco, Español\n",
+    "precio": 989,
+    "stock": 1,
+    "imagen": "https://www.cyberpuerta.mx/img/product/XL/CP-REDRAGON-K630W-RGBSP-BROWN-3ccb96.jpg",
+    "creadoPor": 2,
+    "rolCreador": "cliente",
+    "estado": "aceptado"
+  },
+  {
+    "id": 6,
+    "nombre": "Logitech G203 LIGHTSYNC Mouse Gamer con Cable",
+    "descripcion": "Logitech G203 LIGHTSYNC Mouse Gamer con Cable, Iluminación RGB Personalizable, 6 Botones Programables, Seguimiento de hasta 8,000 dpi, Ultra-Ligero - Color Negro\n",
+    "precio": 493,
+    "stock": 1,
+    "imagen": "http://localhost:3000/uploads/productos/1790311987018-51jQ7C7mYsL._AC_SL1499_.jpg",
+    "creadoPor": 2,
+    "rolCreador": "cliente",
+    "estado": "aceptado"
+  }
+]
